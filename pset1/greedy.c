@@ -6,7 +6,7 @@ float COINS[4] = {0.25, 0.1, 0.05, 0.01};
 
 int change(float in, int coinIndex)
 {
-    int i = (int)(in / COINS[coinIndex]);
+    int i = in / COINS[coinIndex];
     float f = roundf(fmod(in, COINS[coinIndex]) * 100) / 100;
 
     if (f == 0.00)
