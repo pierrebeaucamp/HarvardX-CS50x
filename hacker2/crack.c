@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
     char buf[keySize];
     for (int length = 1; length <= keySize; length++)
     {
-        char* key = crack(argv[1] + 2, length, salt, buf, 0);
+        char* key = crack(argv[1], length, salt, buf, 0);
         if (key != NULL)
         {
             printf("%s\n", key);
