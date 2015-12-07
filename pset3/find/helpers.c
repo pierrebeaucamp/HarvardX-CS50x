@@ -13,11 +13,17 @@
 
 bool binarysearch(int values[], int value, int lo, int hi)
 {
-    if (lo > hi) return false;
+    if (lo > hi)
+        return false;
 
     int p = (lo + hi) / 2;
-    if (values[p] > value) return binarysearch(values, value, lo, p - 1);
-    if (values[p] < value) return binarysearch(values, value, p + 1, hi);
+
+    if (values[p] > value)
+        return binarysearch(values, value, lo, p - 1);
+
+    if (values[p] < value)
+        return binarysearch(values, value, p + 1, hi);
+
     return true;
 }
 
@@ -39,7 +45,8 @@ void swap(int *a, int *b)
 
 void quicksort(int values[], int lo, int hi)
 {
-    if (lo > hi) return;
+    if (lo > hi)
+        return;
 
     int pivot = values[hi];
     int p = lo;
